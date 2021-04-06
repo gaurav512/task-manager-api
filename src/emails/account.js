@@ -11,18 +11,18 @@ const transporter = nodemailer.createTransport({
 
 const sendWelcomeMail = (email, name) => {
     transporter.sendMail({
-        from: "Task-Manager API <grv.devmail@gmail.com>",
+        from: `Task-Manager API <${process.env.SENDER_EMAIL}>`,
         to: email,
-        subject: `Welcome to Task-Manager, ${name}!`,
+        subject: "Welcome to TaskManager!",
         text: `Welcome to the app, ${name}. We hope we can serve you in the best way possible. If you have any queries about our services, feel free to reply to this email.`
     })
 }
 
 const sendLeavingMail = (email, name) => {
     transporter.sendMail({
-        from: "Task-Manager API <grv.devmail@gmail.com>",
+        from: `Task-Manager API <${process.env.SENDER_EMAIL}>`,
         to: email,
-        subject: `We are sorry to see you go, ${name}.`,
+        subject: "We are sorry to see you go!",
         text: `Goodbye, ${name}. We would like to get your feedback about our services. Feel free to reply to this email and let us know what didn't work out.`    
     }) 
 }
