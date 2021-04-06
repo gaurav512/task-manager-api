@@ -14,7 +14,7 @@ const sendWelcomeMail = (email, name) => {
         from: "Task-Manager API <grv.devmail@gmail.com>",
         to: email,
         subject: "Welcome to TaskManager!",
-        text: `Welcome to the app, ${name}. I hope we can serve you in the best way possible. If you have any queries about our services, feel free to reply to this email.`
+        text: `Welcome to the app, ${name}. We hope we can serve you in the best way possible. If you have any queries about our services, feel free to reply to this email.`
     })
 }
 
